@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<title>CALCULADORA</title>
+<style type="text/css">
+   h1{
+    text-align: center;
+    color: #006B58;
+   }
+   body{
+   	background-color: #CBFFF6;
+   }
+   p{
+   	color: #006B58;
+   }
+   button {
+
+   }
+
+  </style>
+</head>
+
+<body>
+	<header><h1>CALCULADORA</h1></header>
+<br><br><br>
+
+		<input type="number" id="numeroA">
+		<input type="number" id="numeroB">
+
+		<button ><a href="index.html">C</a></button>
+		<button id="sumar">+</button>
+		<button id="restar">-</button>
+		<button id="multiplicar">*</button>
+		<button id="dividir">/</button>
+		<button id="elevar">^2</button>
+		<button id="raiz">//2</button>
+
+
+		<br><br><br>
+    	<p >Resultado del Calculo:</p>
+		<div id="resultado"></div>
+
+	<script>
+//------------------------------------------------------------------------
+
+//----------------------------------------------------------------
+	function suma1() 
+{
+		var n1=parseInt(document.getElementById('numeroA').value);
+
+		var n2=parseInt(document.getElementById('numeroB').value);
+	
+	var suma=n1+n2;
+
+
+		document.getElementById("resultado").innerHTML = " <br> " + suma;
+		
+	}
+
+var b=document.getElementById('sumar');
+	
+b.addEventListener('click',suma1);
+//----------------------------------------------------------------
+	function resta1() 
+{
+		var n1=parseInt(document.getElementById('numeroA').value);
+
+		var n2=parseInt(document.getElementById('numeroB').value);
+	
+	var resta=n1-n2;
+
+
+		document.getElementById("resultado").innerHTML = " <br>  " + resta;
+		
+	}
+
+var b=document.getElementById('restar');
+	
+b.addEventListener('click',resta1);
+//----------------------------------------------------------------
+	function multi1() 
+{
+		var n1=parseInt(document.getElementById('numeroA').value);
+
+		var n2=parseInt(document.getElementById('numeroB').value);
+	
+	var multi=n1*n2;
+
+
+		document.getElementById("resultado").innerHTML = " <br> " + multi;
+		
+	}
+
+var b=document.getElementById('multiplicar');
+	
+b.addEventListener('click',multi1);
+//----------------------------------------------------------------
+	function div1() 
+{
+		var n1=parseInt(document.getElementById('numeroA').value);
+
+		var n2=parseInt(document.getElementById('numeroB').value);
+	
+	var div=n1/n2;
+
+
+		document.getElementById("resultado").innerHTML = " <br> " + div;
+		
+	}
+
+var b=document.getElementById('dividir');
+	
+b.addEventListener('click',div1);
+//----------------------------------------------------------------
+	function elevar1() 
+{
+		var n1=parseInt(document.getElementById('numeroA').value);
+
+		var n2=parseInt(document.getElementById('numeroB').value);
+	
+	var elevar=n1**2;
+	
+
+
+		document.getElementById("resultado").innerHTML = " <br> " + elevar;
+		
+	}
+
+var b=document.getElementById('elevar');
+	
+b.addEventListener('click',elevar1);
+//----------------------------------------------------------------
+	function raiz1() 
+{
+		var n1=parseInt(document.getElementById('numeroA').value);
+
+		var n2=parseInt(document.getElementById('numeroB').value);
+	
+		var raiz= Math.sqrt(n1);
+
+		document.getElementById("resultado").innerHTML = " <br> " + raiz;
+		
+	}
+
+var b=document.getElementById('raiz');
+	
+b.addEventListener('click',raiz1);
+	</script>
+
+</body>
+
+</html>
